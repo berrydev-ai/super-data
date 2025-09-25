@@ -345,24 +345,44 @@ print(f"Compatible: {info['is_compatible']}")
 ```
 super-data/
 ├── src/
-│   ├── core/           # MCP server core
-│   ├── data/           # Data providers and schemas
-│   │   ├── providers/
-│   │   └── schemas/
-│   │       ├── versioning.py
-│   │       └── migrations.py
-│   ├── query/          # Query engines
-│   ├── learning/       # Self-training system
-│   │   ├── database.py
-│   │   ├── models.py
-│   │   └── validator.py
-│   ├── tools/          # MCP tools
-│   └── utils/          # Utilities
-├── datasets/           # Default datasets directory
-├── database/           # Learned tools storage
-│   └── learned_tools.db
-├── tests/              # Test suite
-└── config/             # Configuration files
+│   └── super_mcp/
+│       ├── core/               # MCP server core
+│       ├── database/
+│       │   ├── models.py
+│       │   ├── connection.py
+│       │   └── migrations.py
+│       ├── data/               # Data providers and schemas
+│       │   ├── providers/
+│       │   └── schemas/
+│       │       ├── versioning.py
+│       │       └── migrations.py
+│       ├── query/              # Query engines
+│       │   └── engines/
+│       ├── functions/
+│       │   ├── library.py
+│       │   ├── resolver.py
+│       │   └── compiler.py
+│       ├── sync/               # S3 syncing
+│       │   ├── s3_sync.py
+│       │   ├── lock.py
+│       │   └── merge.py
+│       ├── learning/           # Self-training system
+│       │   ├── proposer.py
+│       │   ├── validator.py
+│       │   └── approval.py
+│       ├── auth/               # Authentication
+│       │   └── identity.py
+│       ├── tools/              # MCP tools
+│       └── utils/              # Utilities
+├── database/                   # Learned tools storage
+│   ├── tools.db
+│   └── .version
+├── datasets/                   # Default datasets directory
+│   └── json/
+│       ├── functions.yaml      # Shared function definitions
+│       └── tools.yaml          # Seed tool definitions
+├── tests/                      # Test suite
+└── config/                     # Configuration files
 ```
 
 ### Running Tests

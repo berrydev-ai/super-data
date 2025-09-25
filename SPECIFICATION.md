@@ -110,34 +110,35 @@ You are building Super Data MCP, a Model Context Protocol server that provides L
 ```
 super-data/
 ├── src/
-│   ├── core/
-│   ├── database/         # New: Central database layer
-│   │   ├── models.py
-│   │   ├── connection.py
-│   │   └── migrations.py
-│   ├── data/
-│   │   ├── providers/
-│   │   └── schemas/
-│   ├── query/
-│   │   └── engines/
-│   ├── functions/        # New: jq function management
-│   │   ├── library.py
-│   │   ├── resolver.py
-│   │   └── compiler.py
-│   ├── sync/            # New: S3 synchronization
-│   │   ├── s3_sync.py
-│   │   ├── lock.py
-│   │   └── merge.py
-│   ├── learning/
-│   │   ├── proposer.py
-│   │   ├── validator.py
-│   │   └── approval.py
-│   ├── auth/            # New: User management
-│   │   └── identity.py
-│   ├── tools/
-│   └── utils/
+│   └── super_mcp/
+│       ├── core/
+│       ├── database/
+│       │   ├── models.py
+│       │   ├── connection.py
+│       │   └── migrations.py
+│       ├── data/
+│       │   ├── providers/
+│       │   └── schemas/
+│       ├── query/
+│       │   └── engines/
+│       ├── functions/
+│       │   ├── library.py
+│       │   ├── resolver.py
+│       │   └── compiler.py
+│       ├── sync/
+│       │   ├── s3_sync.py
+│       │   ├── lock.py
+│       │   └── merge.py
+│       ├── learning/
+│       │   ├── proposer.py
+│       │   ├── validator.py
+│       │   └── approval.py
+│       ├── auth/
+│       │   └── identity.py
+│       ├── tools/
+│       └── utils/
 ├── database/
-│   ├── tools.db         # Primary SQLite database
+│   ├── tools.db
 │   └── .version
 ├── datasets/
 │   └── json/

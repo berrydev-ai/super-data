@@ -3,7 +3,7 @@ name = "super-data"
 dynamic = ["version"]
 description = "A Model Context Protocol (MCP) server that provides LLMs with sophisticated data querying capabilities across multiple data sources."
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.10"
 authors = [{ name = "Berry Development, LLC." }]
 maintainers = [{ name = "Eric Berry", email = "eric@berrydev.ai" }]
 keywords = ["mcp", "model context protocol", "llm", "large language model", "data querying", "data integration"]
@@ -13,6 +13,7 @@ classifiers = [
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
@@ -80,7 +81,7 @@ venv = ".venv"
 
 [tool.ruff]
 line-length = 120
-target-version = "py312"
+target-version = "py310"
 extend-exclude = ["README.md"]
 
 [tool.ruff.lint]
@@ -103,7 +104,7 @@ mccabe.max-complexity = 10
 [tool.ruff.lint.pylint]
 allow-magic-value-types = ["bytes", "float", "int", "str"]
 max-args = 5         # Default is 5
-max-branches = 12     # Default is 12
+max-branches = 12    # Default is 12
 max-returns = 6      # Default is 6
 max-statements = 50  # Default is 50
 
